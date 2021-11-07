@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const appDirectory = fs.realpathSync(process.cwd());
 
 module.exports = {
-    entry: './src/client/App.js',
+    entry: './client/App.js',
     output: {
         filename: 'client-bundle.js',
         path: path.join(__dirname, '/dist')
@@ -25,7 +25,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             inject: true,
-            template: path.resolve(appDirectory, "./src/client/public/index.html"),
+            template: path.resolve(appDirectory, "./client/public/index.html"),
         }),
     ],
 }
